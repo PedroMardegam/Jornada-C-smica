@@ -1,0 +1,135 @@
+/* =====================
+   HERO — FADE IN
+   Entrada suave do conteúdo ao carregar a página
+   ===================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease forwards;
+}
+
+
+/* =====================
+   FACT CARDS — ENTRADA COM SCROLL
+   O JS adiciona .visible quando o card entra na viewport
+   ===================== */
+.fact-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease,
+              border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Delay escalonado — cards entram um após o outro */
+.fact-card:nth-child(2) { transition-delay: 0.15s; }
+.fact-card:nth-child(3) { transition-delay: 0.30s; }
+
+.fact-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =====================
+   BOTÃO PRIMÁRIO — PULSAR
+   Chama atenção sutilmente
+   ===================== */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0px var(--color-accent-glow); }
+  50%       { box-shadow: 0 0 20px var(--color-accent-glow); }
+}
+
+.btn-primary {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+
+/* =====================
+   PLANETAS — SLIDE OUT (botão Próximo)
+   Conteúdo sai pela esquerda
+   ===================== */
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}
+
+.slide-out {
+  animation: slideOutLeft 0.35s ease forwards;
+  pointer-events: none; /* impede cliques durante a animação */
+}
+
+
+/* =====================
+   PLANETAS — SLIDE IN (botão Próximo)
+   Conteúdo entra pela direita
+   ===================== */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideInRight 0.35s ease forwards;
+}
+
+
+/* =====================
+   PLANETAS — SLIDE OUT REVERSO (botão Anterior)
+   Conteúdo sai pela direita
+   ===================== */
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
+
+.slide-out-reverse {
+  animation: slideOutRight 0.35s ease forwards;
+  pointer-events: none;
+}
+
+
+/* =====================
+   PLANETAS — SLIDE IN REVERSO (botão Anterior)
+   Conteúdo entra pela esquerda
+   ===================== */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-reverse {
+  animation: slideInLeft 0.35s ease forwards;
+}
