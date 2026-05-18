@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmos — Explore o Universo</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/animation.css" />
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="navbar">
+    <span class="nav-logo">COSMOS</span>
+    <ul class="nav-links">
+      <li><a href="#beginning">Início</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#planets">Planetas</a></li>
+      <li><a href="#facts">Curiosidades</a></li>
+      <li><a href="#cta">Avaliações</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="beginning">
+    <canvas id="stars-canvas"></canvas>
+    <div class="hero-content">
+      <h1>O universo <span class="highlight">não tem limites.</span><br />Sua curiosidade também não.</h1>
+      <p>Uma jornada visual pelo cosmos — planetas, estrelas e mistérios que desafiam a imaginação.</p>
+      <a href="#about" class="btn-primary">Iniciar Jornada</a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="about">
+    <div class="container">
+      <h2>O que é o Cosmos?</h2>
+      <p>
+        O cosmo (ou cosmos) é o universo em sua totalidade, visto como um sistema ordenado, harmonioso e organizado, em oposição ao caos.  Derivado do grego kósmos, o termo designa não apenas a soma de todas as coisas materiais e energéticas, mas a estrutura universal regida por leis que impõem ordem e beleza. O cosmos é o palco onde se desenrolam os fenômenos naturais, desde a dança das galáxias até a complexidade da vida na Terra. Ele é o objeto de estudo da astronomia, física, cosmologia e filosofia, inspirando a humanidade a buscar respostas sobre nossa origem, destino e lugar no universo. O cosmos é um convite à exploração, à contemplação e à admiração diante da vastidão e mistério que nos cerca.
+      </p>
+    </div>
+  </section>
+
+  <!-- PLANETAS -->
+  <section id="planets">
+    <div class="planets-layout">
+
+      <!-- LADO ESQUERDO: canvas do planeta girando -->
+      <div class="planet-canvas-wrapper">
+        <canvas id="planet-canvas"></canvas>
+      </div>
+
+      <!-- LADO DIREITO: informações do planeta -->
+      <div class="planet-info" id="planet-info">
+        <span class="planet-counter" id="planet-counter">01 / 08</span>
+        <h2 id="planet-name">Mercúrio</h2>
+        <p id="planet-description"></p>
+        <div class="planet-buttons">
+          <button class="btn-secondary" id="btn-prev">← Anterior</button>
+          <button class="btn-primary" id="btn-next">Próximo →</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CURIOSIDADES -->
+  <section id="facts">
+    <div class="container">
+      <h2>Curiosidades</h2>
+      <div class="facts-grid">
+        <div class="fact-card">
+          <h3>☀️ O Sol</h3>
+          <p>O Sol é a estrela central do Sistema Solar, classificada como uma anã amarela de sequência principal (tipo espectral G2V).  Ele é uma esfera de plasma quente que contém aproximadamente 99,86% da massa total do Sistema Solar e mantém todos os demais corpos celestes, como planetas e asteroides, em órbita devido à sua intensa atração gravitacional.</p>
+        </div>
+        <div class="fact-card">
+          <h3>🌌 Via Láctea</h3>
+          <p>A Via Láctea é uma galáxia espiral barrada que contém o Sistema Solar e, consequentemente, a Terra.  Com um diâmetro estimado em aproximadamente 100.000 a 120.000 anos-luz, ela é composta por centenas de bilhões de estrelas, gases, poeira cósmica e matéria escura, unidos pela gravidade.</p>
+        </div>
+        <div class="fact-card">
+          <h3>🕳️ Buracos Negros</h3>
+          <p>Um buraco negro é uma região do espaço-tempo onde a gravidade é tão intensa que nada, nem mesmo a luz, consegue escapar dela.  Essa força extrema resulta da concentração de uma massa colossal em um espaço minúsculo, deformando o tecido do universo ao redor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="container">
+      <h2>Gostou da jornada?</h2>
+      <p>Deixe sua avaliação e nos diga o que achou👌.</p>
+      <a href="reviews.html" class="btn-primary">Ver Avaliações</a>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

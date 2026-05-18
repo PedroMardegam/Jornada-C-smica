@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmos — Avaliações</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/animation.css" />
+  <link rel="stylesheet" href="style/reviews.css" />
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">COSMOS</a>
+    <ul class="nav-links">
+      <li><a href="index.html#beginning">Início</a></li>
+      <li><a href="index.html#about">Sobre</a></li>
+      <li><a href="index.html#planets">Planetas</a></li>
+      <li><a href="index.html#facts">Curiosidades</a></li>
+      <li><a href="reviews.html" class="active">Avaliações</a></li>
+    </ul>
+  </nav>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <section id="reviews-hero">
+    <div class="container">
+      <h1>Avaliações</h1>
+      <p>O que os exploradores do cosmos acharam dessa jornada?</p>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO -->
+  <section id="review-form-section">
+    <div class="container">
+      <h2>Deixe sua avaliação</h2>
+
+      <form id="review-form">
+
+        <div class="form-group">
+          <label for="review-name">Seu nome</label>
+          <input
+            type="text"
+            id="review-name"
+            placeholder="Como devemos te chamar?"
+            maxlength="50"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="review-rating">Nota</label>
+          <select id="review-rating">
+            <option value="5">★★★★★ — Incrível</option>
+            <option value="4">★★★★☆ — Muito bom</option>
+            <option value="3">★★★☆☆ — Bom</option>
+            <option value="2">★★☆☆☆ — Regular</option>
+            <option value="1">★☆☆☆☆ — Ruim</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="review-text">Comentário</label>
+          <textarea
+            id="review-text"
+            placeholder="Conte o que achou da experiência..."
+            rows="4"
+            maxlength="300"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Enviar Avaliação</button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- LISTA DE AVALIAÇÕES -->
+  <section id="reviews-section">
+    <div class="container">
+      <h2>O que dizem os exploradores</h2>
+      <div id="reviews-list">
+        <!-- Avaliações renderizadas pelo reviews.js -->
+      </div>
+    </div>
+  </section>
+
+  <script src="js/reviews.js"></script>
+</body>
+</html>
